@@ -1,8 +1,10 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const CoinCard = ({coin}) => {
     return (
         <div className='shadow-lg rounded-2xl w-[250px] bg-white p-4'>
+            <Link to={`/coin-details/${coin.id}`}>
            <div className='gap-4 flex justify-between items-center'>
           <div className='flex-shrink-0'>
             <div>
@@ -21,6 +23,7 @@ const CoinCard = ({coin}) => {
 
 
           </div> 
+          </Link>
 
             
         </div>
