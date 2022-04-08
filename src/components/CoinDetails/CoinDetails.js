@@ -8,12 +8,14 @@ const CoinDetails = () => {
     const [loading,setLoading]=useState(false)
 
     useEffect(()=>{
+      setLoading(true)
         const url =`https://api.coingecko.com/api/v3/coins/${id} `
         fetch(url)
         .then(res =>res.json())
         .then(data=>{
             // console.log(data)
             setCoin(data)
+            setLoading(false)
         })
     },[id])
     return (
