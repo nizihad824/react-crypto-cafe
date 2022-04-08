@@ -14,9 +14,9 @@ const CoinCard = ({coin}) => {
             </div>
           </div>
 
-          <div>
-              <span>{coin.name}</span>
-              <span>{coin.symbol}</span>
+          <div className=' flex flex-col justify-around'>
+              <span className='text-gray-600 font-medium'>{coin.name}</span>
+              <span  className='text-gray-400 text-xs'>{coin.symbol}</span>
           </div>
 
 
